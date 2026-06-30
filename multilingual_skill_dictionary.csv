@@ -1,0 +1,62 @@
+﻿rule_type,canonical_skill,pattern_group,regex_pattern,language,examples_included,examples_excluded,rationale_notes
+include,ChatGPT,Direct mention,\bchatgpt\b,EN/ES/PT,ChatGPT specialist; Experience with ChatGPT-based workflows,Generic GPT mentions without explicit ChatGPT reference,Detects explicit ChatGPT references.
+include,LLM,Acronym,\bllm\b,EN,LLM engineer,LL.M.; Master of Laws,Acronym retained only after legal-disambiguation filters.
+include,LLM,Expanded form,\blarge language model(s)?\b,EN,Large language model applications,Non-AI language references,Expanded English form.
+include,LLM,Portuguese expanded forms,\bgrande?s? modelo?s? de linguagem\b,PT,Grandes modelos de linguagem,Non-AI language references,Portuguese variant.
+include,LLM,Portuguese expanded form,\bmodelo de linguagem de grande porte\b,PT,Modelo de linguagem de grande porte,Non-AI language references,Portuguese variant.
+include,LLM,Model-family mentions,\bmeta\s*llama\b,EN,Meta Llama deployment,Non-AI uses of llama if any,LLM-family model mention.
+include,LLM,Model-family mentions,\bllama\s?2\b,EN,Experience with Llama 2,Non-AI uses of llama if any,LLM-family model mention.
+include,LLM,Model-family mentions,\bllama\s?3\b,EN,Experience with Llama 3,Non-AI uses of llama if any,LLM-family model mention.
+include,LLM,Model-family mentions,\bllama\b,EN,Llama deployment,Non-AI uses of llama if any,Broad model-family mention; should be interpreted in AI context.
+include,GenAI,Generative AI multilingual forms,\bgenerative ai\b,EN,Generative AI consultant,Generic AI postings without generative component,English GenAI phrase.
+include,GenAI,Generative AI multilingual forms,\bia generativa\b,ES/PT,Especialista en IA generativa,Generic AI postings without generative component,Spanish/Portuguese short form.
+include,GenAI,Generative AI multilingual forms,\binteligencia artificial generativa\b,ES,Inteligencia artificial generativa,Generic AI postings without generative component,Spanish full form.
+include,GenAI,Generative AI multilingual forms,\bintelig[eê]ncia artificial generativa\b,PT,Inteligência artificial generativa,Generic AI postings without generative component,Portuguese full form with accent handling.
+include,Prompt Engineering,English variants,\bprompt engineer(ing)?\b,EN,Prompt engineer; Prompt engineering,Generic writing/content roles using prompt in a non-AI sense,English prompt engineering/engineer.
+include,Prompt Engineering,Portuguese variants,\bengenharia de prompts\b,PT,Engenharia de prompts,Generic writing/content roles using prompt in a non-AI sense,Portuguese phrase.
+include,Prompt Engineering,Portuguese variants,\bengenheir[oa] de prompts\b,PT,Engenheiro de prompts; Engenheira de prompts,Generic writing/content roles using prompt in a non-AI sense,Portuguese gender variants.
+include,Prompt Engineering,Spanish variants,\bingenier[oa] de prompts\b,ES,Ingeniero de prompts; Ingeniera de prompts,Generic writing/content roles using prompt in a non-AI sense,Spanish gender variants.
+include,Prompt Engineering,Spanish variants,\bingenieria de prompts\b,ES,Ingeniería de prompts,Generic writing/content roles using prompt in a non-AI sense,Spanish phrase; text is normalized without diacritics.
+include,Machine Learning,Multilingual forms,\bmachine learning\b,EN,Machine learning engineer,Analytics/statistics roles with no explicit ML reference,English ML phrase.
+include,Machine Learning,Multilingual forms,\baprendizaje automatico\b,ES,Especialista en aprendizaje automático,Analytics/statistics roles with no explicit ML reference,Spanish variant; text is normalized without diacritics.
+include,Machine Learning,Multilingual forms,\baprendizado de maquina\b,PT,Aprendizado de máquina,Analytics/statistics roles with no explicit ML reference,Portuguese variant; text is normalized without diacritics.
+include,Machine Learning,Multilingual forms,\baprendizagem de maquina\b,PT,Aprendizagem de máquina,Analytics/statistics roles with no explicit ML reference,Portuguese variant; text is normalized without diacritics.
+include,Deep Learning,Multilingual forms,\bdeep learning\b,EN,Deep learning scientist,AI postings lacking explicit deep-learning content,English DL phrase.
+include,Deep Learning,Multilingual forms,\baprendizaje profundo\b,ES,Aprendizaje profundo aplicado,AI postings lacking explicit deep-learning content,Spanish variant.
+include,Deep Learning,Multilingual forms,\baprendizado profundo\b,PT,Aprendizado profundo,AI postings lacking explicit deep-learning content,Portuguese variant.
+include,Deep Learning,Multilingual forms,\baprendizagem profunda\b,PT,Aprendizagem profunda,AI postings lacking explicit deep-learning content,Portuguese variant.
+include,NLP/PLN,Acronyms and full expressions,\bnlp\b,EN,NLP engineer,PNL as neurolinguistic programming,English acronym.
+include,NLP/PLN,Acronyms and full expressions,\bprocesamiento de lenguaje natural\b,ES,Procesamiento de lenguaje natural,PNL as neurolinguistic programming,Spanish full expression.
+include,NLP/PLN,Acronyms and full expressions,\bpln\b,ES/PT,PLN aplicado a texto,PNL as neurolinguistic programming,Spanish/Portuguese acronym; false positives filtered separately.
+include,NLP/PLN,Acronyms and full expressions,\bprocessamento de linguagem natural\b,PT,Processamento de linguagem natural,PNL as neurolinguistic programming,Portuguese full expression.
+include,Computer Vision,Multilingual forms,\bcomputer vision\b,EN,Computer vision specialist,Generic visual design roles,English phrase.
+include,Computer Vision,Multilingual forms,\bvision por computador(a)?\b,ES,Visión por computador; Visión por computadora,Generic visual design roles,Spanish variants; text is normalized without diacritics.
+include,Computer Vision,Multilingual forms,\bvis[aã]o computacional\b,PT,Visão computacional,Generic visual design roles,Portuguese variant.
+include,MLOps,Direct mention,\bmlops\b,EN/ES/PT,MLOps engineer; Lead MLOps specialist,DevOps positions unrelated to machine learning,Direct MLOps mention.
+include,PyTorch,Direct mention,\bpytorch\b,EN/ES/PT,Experience with PyTorch,Incidental or non-substantive references,Framework mention.
+include,TensorFlow,Direct mention,\btensorflow\b,EN/ES/PT,TensorFlow developer; TensorFlow pipelines,Incidental mentions unrelated to model development,Framework mention.
+include,LangChain,Direct mention,\blangchain\b,EN/ES/PT,LangChain experience required,None specifically identified,Framework/tool mention.
+include,HuggingFace/Transformers,Library and framework mentions,\bhugging ?face\b,EN,Hugging Face,Incidental or non-AI uses,Library mention.
+include,HuggingFace/Transformers,Library and framework mentions,\btransformers\b,EN,Transformers-based NLP models,Transformers in unrelated non-AI contexts,Library/model architecture mention.
+include,RAG/Embeddings/VectorDB,Retrieval stack and vector infrastructure,\brag\b,EN,RAG pipelines,Generic acronym uses outside AI context,Acronym for Retrieval-Augmented Generation.
+include,RAG/Embeddings/VectorDB,Retrieval stack and vector infrastructure,\bretrieval[- ]augmented generation\b,EN,Retrieval-augmented generation,Generic retrieval without generative component,Expanded RAG expression.
+include,RAG/Embeddings/VectorDB,Retrieval stack and vector infrastructure,\bembeddings?\b,EN/ES/PT,Embeddings engineer,Generic mentions not related to AI if any,Embedding(s) references.
+include,RAG/Embeddings/VectorDB,Retrieval stack and vector infrastructure,\bvector (db|database|store)s?\b,EN,Vector database; vector store,Generic database roles without GenAI context,Vector data infrastructure.
+include,RAG/Embeddings/VectorDB,Retrieval stack and vector infrastructure,\bfaiss\b,EN,FAISS indexing,Generic database roles without GenAI context,Vector search library.
+include,RAG/Embeddings/VectorDB,Retrieval stack and vector infrastructure,\bmilvus\b,EN,Milvus vector database,Generic database roles without GenAI context,Vector database.
+include,RAG/Embeddings/VectorDB,Retrieval stack and vector infrastructure,\bweaviate\b,EN,Weaviate vector database,Generic database roles without GenAI context,Vector database.
+include,RAG/Embeddings/VectorDB,Retrieval stack and vector infrastructure,\bpinecone\b,EN,Pinecone vector database,Generic database roles without GenAI context,Vector database.
+include,Cloud GenAI,Platform and deployment tools,\bopenai api\b,EN,OpenAI API integration,Generic API work without AI stack,Cloud/API GenAI deployment.
+include,Cloud GenAI,Platform and deployment tools,\bazure openai\b,EN,Azure OpenAI deployment,Generic Azure roles without AI stack,Cloud GenAI platform.
+include,Cloud GenAI,Platform and deployment tools,\bvertex ai\b,EN,Vertex AI deployment,Generic cloud positions without AI stack,Cloud AI platform.
+include,Cloud GenAI,Platform and deployment tools,\baws bedrock\b,EN,AWS Bedrock,Generic AWS roles without AI stack,Cloud GenAI platform.
+include,Cloud GenAI,Platform and deployment tools,\bsagemaker\b,EN,SageMaker,Generic AWS roles without AI stack,ML/AI deployment service.
+include,Cloud GenAI,Platform and deployment tools,\bdatabricks\b,EN,Databricks AI workflows,Generic data engineering roles without AI stack,Data/AI platform mention.
+exclude,General exclusion,Adobe Illustrator ambiguity,\badobe\b.*\billustrator\b,EN,,Graphic designer - Adobe Illustrator,Prevents false positives derived from AI embedded in Adobe Illustrator references.
+exclude,General exclusion,Illustrator ambiguity,\billustrator\b,EN,,Illustrator specialist,Prevents false positives derived from Illustrator references.
+exclude,NLP/PLN,Neurolinguistic programming ambiguity,\bprogramaci[oó]n neuroling[uü]istica\b,ES,,Certificación en programación neurolingüística,"Excludes Spanish PNL as neurolinguistic programming, not natural language processing."
+exclude,NLP/PLN,Neurolinguistic programming ambiguity,\bprograma[cç][aã]o neurolingu[ií]stica\b,PT,,Programação neurolinguística,"Excludes Portuguese PNL as neurolinguistic programming, not natural language processing."
+exclude,LLM,Legal LLM ambiguity,\bmaster of laws\b,EN,,Master of Laws preferred,Excludes legal education uses of LLM.
+exclude,LLM,Legal LLM ambiguity,\bll\.m\b,EN,,LL.M. required,Excludes legal education uses of LL.M.
+context_exclude,LLM,Context-based legal disambiguation,LLM + legal terms AND NOT AI indicators,EN/ES,LLM engineer with AI models,Corporate legal counsel - LLM preferred,"Posting excluded when LLM appears with legal terms (law, lawyer, legal, derecho, abogado) and no AI indicators are present."
+context_include,LLM,AI-context indicators for legal disambiguation,\b(ai|inteligencia artificial|machine learning|deep learning|nlp|mlops|modelo|modelos|modelagem|pytorch|tensorflow|embeddings?)\b,EN/ES/PT,LLM model development; inteligencia artificial y modelos,,AI-context indicators used to prevent excluding genuine LLM postings.
